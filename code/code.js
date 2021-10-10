@@ -95,7 +95,7 @@ async function updateMap() {
       var m = viewer.entities.add({
         position : Cesium.Cartesian3.fromDegrees(getPosition(t)[1], getPosition(t)[0]),
         billboard : {
-          image : '/images/' + image + '.png',
+          image : 'images/' + image + '.png',
           width : 16,
           height : 16
         },

@@ -1,4 +1,4 @@
-const SERVER_URL = "http://192.168.1.240:8090/";
+const SERVER_URL = "https://planesailingserver.ianrenton.com/";
 
 // Set up Cesium
 Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2ZWVjNWJhYS1hNjUyLTRkYWEtODE5MC1hMWFkYWQ0NzBhYTEiLCJpZCI6NjkxMDEsImlhdCI6MTYzMzE2MTI2OX0._M65C5gcKo2ou4xpXbbcS6JC6hobPcPQ7Cos4VOxdEE';
@@ -68,13 +68,13 @@ async function fetchData() {
 }
 
 fetchData();
-setInterval(fetchData, 2000);
+setInterval(fetchData, 10000);
+setInterval(updateMap, 1000);
 
 async function handleData(result) {
   clockOffset = moment().diff(moment(result.time).utc(), 'seconds');
   tracks.clear();
   tracks = objectToMap(result.tracks);
-  updateMap();
 }
 
 async function updateMap() {

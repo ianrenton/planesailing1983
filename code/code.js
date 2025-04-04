@@ -1,4 +1,4 @@
-const SERVER_URL = "https://planesailingserver.ianrenton.com/";
+const SERVER_URL = "https://planesailing.ianrenton.com/api/";
 
 // Set up Cesium
 Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2ZWVjNWJhYS1hNjUyLTRkYWEtODE5MC1hMWFkYWQ0NzBhYTEiLCJpZCI6NjkxMDEsImlhdCI6MTYzMzE2MTI2OX0._M65C5gcKo2ou4xpXbbcS6JC6hobPcPQ7Cos4VOxdEE';
